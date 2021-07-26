@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/sc/{{a.id}}" method="post" enctype="multipart/form-data">
+            <input name="id" type="text" style="height:20px;width:35px" value={{a.id}} >&nbsp; 
+            <input name="username" type="text" style="height:20px;width:80px" value={{a.username}} >&nbsp;
+            <input name="password" type="text" value={{a.password}}>&nbsp; 
+            <input type="file" multiple="multiple" name="picture">
+            <input type="submit">
+    </form>
+</body>
+</html>

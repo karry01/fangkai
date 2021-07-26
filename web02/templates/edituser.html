@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>编辑用户</h1>
+      
+    <form method="POST" action="/edituser/{{obj.id}}/">
+        <div>
+         <div><label>用户名：</label></div>
+         <input type="text" name="username" value="{{obj.username}}" >
+        </div>
+        
+         <div>
+          <div><label>密码：</label></div>
+          <input type="password" name="password"  value="{{obj.password}}" >
+         </div> 
+        <input type='submit' value="提交" />
+    </form>
+</body>
+</html>
+

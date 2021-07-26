@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+<link href="{{static_url("css/bootstrap.min.css")}}" rel="stylesheet">
+</head>
+<body>
+<form method=POST >
+<div class="row">
+<h1 style="text-align: center">Welcome!</h1>
+    <h3 style="text-align: center">当前登录用户是{{username}}</h3>
+    <ul>
+        {% for row in a %}
+            <input name="id" type="text" style="height:20px;width:35px" value={{row.id}} >&nbsp; 
+            <input name="username" type="text" style="height:20px;width:80px" value={{row.username}} >&nbsp;
+            <input name="password" type="text" value={{row.password}}>&nbsp; 
+            <img src="{{row.img_url}}"  >
+            <li>  &nbsp;&nbsp;&nbsp;
+            <a href="/edituser/{{row.id}}/">编辑</a> 
+            <a href="/adduser">添加</a> 
+            <a href="/deluser/{{row.id}}">删除</a>
+            <a href="/sc/{{row.id}}">上传图片</a>
+            </li>
+        {% end %}
+
+    </ul>
+</div>
+</form>
+<link href="{{static_url("css/cx.css")}}" rel="stylesheet">
+<button type="button" class="masthead" disabled="disabled">登录</button>
+<button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button>
+<h1>-------------</h1>
+<button type="button" class="btn btn-primary btn-lg active bg-danger">提交</button>
+<button type="button" class="btn btn-default btn-lg active">Button</button>
+
+
+<div id="globallink">
+<div class="text-hover">
+    <h2>慢慢看漫画</h2>
+    <img src="static/images/3.jpg" class="img-hover" alt="">
+</div>
+</div>
+</body>
+</html>
